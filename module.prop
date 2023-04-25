@@ -1,6 +1,7 @@
-id=saturation
-name=Saturation
-version=v1.1
-versionCode=2
-author=Draco
+id=oled2lcd
+name=OLED2LCD
+version=v1.2.0
+versionCode=3
+author=Ali Beyaz (original module and idea: Draco)
 description=Increase the saturation of the panel to 2x.
+updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/magisk/update.json
