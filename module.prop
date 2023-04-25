@@ -4,4 +4,4 @@ version=v1.2.0
 versionCode=3
 author=Ali Beyaz (original module and idea: Draco)
 description=Increase the saturation of the panel to 2x.
-updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/master/magisk/update.json
+updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/master/update.json
