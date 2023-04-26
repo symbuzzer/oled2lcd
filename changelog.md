@@ -4,7 +4,7 @@ For support this project: [Patreon](https://avalibeyaz.com/patreon)
 ## v1.2.0  
 - First version by me :)  
 - Renamed saturation to oled2lcd  
-- Changed versioning structure from vx.y to vx.y.x
+- Changed versioning structure from vx.y to vx.y.z
 - Added update feature  
 - Addded changelog  
   
