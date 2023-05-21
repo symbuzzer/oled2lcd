@@ -1,6 +1,9 @@
 For support this project: [Patreon](https://avalibeyaz.com/patreon)  
 --------------
   
+## v1.2.1
+- Added create&release workflow  
+  
 ## v1.2.0  
 - First version by me :)  
 - Renamed saturation to oled2lcd  
