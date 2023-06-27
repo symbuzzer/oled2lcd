@@ -1,7 +1,7 @@
 id=oled2lcd
 name=OLED2LCD
-version=v1.2.1
-versionCode=121
+version=v1.2.2
+versionCode=122
 author=Ali Beyaz (original module and idea: Draco)
 description=Increase the saturation of the panel to 2x.
 updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/update.json
