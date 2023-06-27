@@ -1,6 +1,9 @@
 For support this project: [Patreon](https://avalibeyaz.com/patreon)  
 --------------
   
+## v1.2.2
+- Added KernelSU support    
+  
 ## v1.2.1
 - Added create&release workflow  
   
