@@ -34,7 +34,7 @@ jobs:
       - name: Mpdify update15.json zipUrl
         uses: symbuzzer/fork-action-set-json-field@master
         with:
-          file: downloads/update.json
+          file: update.json
           field: zipUrl
           value: https://github.com/symbuzzer/oled2lcd/releases/latest/download/oled2lcd_1.5.zip
           
