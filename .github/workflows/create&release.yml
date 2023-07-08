@@ -62,10 +62,6 @@ jobs:
         run:  |  
           sudo zip -r release/${{ github.event.repository.name }}_2.0.zip *  
           
-      - name: Copy modules zip files to release folder
-        run:  |
-            sudo cp *.zip release/
-          
       - name: Create and upload release asset
         uses: symbuzzer/fork-github-release@master
         with:
