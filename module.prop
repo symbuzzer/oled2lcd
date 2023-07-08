@@ -3,5 +3,5 @@ name=OLED2LCD
 version=v1.3.0
 versionCode=130
 author=Ali Beyaz (avalibeyaz.com/github)
-description=Increase the saturation of the panel to 2x
-updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/update.json
+# description=Increase the saturation of the panel to 2.0x.
+# updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/update.json
