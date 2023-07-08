@@ -6,20 +6,42 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    
       - name: Checkout
         uses: symbuzzer/fork-checkout-repo@main
         with:
           persist-credentials: false
           fetch-depth: 0
+          
+      - name: Create release directory
+        run:  |
+          mkdir -p release
+          
       - name: Get module version
         id: version
         uses: symbuzzer/fork-github-action-json-property@master
         with: 
             path: 'update.json'
             prop_path: 'version'
-      - name: Creating module zip
+            
+      - name: Create module 2.0 zip
         run:  |
-          sudo zip -r ${{ github.event.repository.name }}.zip *  
+          sudo zip -r ${{ github.event.repository.name }}_2.0.zip *  
+          
+      - name: Create module 1.5 zip
+        run:  |
+          sed -i "13s/.*/# service call SurfaceFlinger 1022 f 1.5" service.sh
+          sudo zip -r ${{ github.event.repository.name }}_1.5.zip *  
+          
+      - name: Create module 1.0 zip
+        run:  |
+          sed -i "13s/.*/# service call SurfaceFlinger 1022 f 1.5" service.sh
+          sudo zip -r ${{ github.event.repository.name }}_1.0.zip *  
+          
+      - name: Copy modules zip files to release folder
+        run:  |
+            sudo cp *.zip release/
+          
       - name: Create and upload release asset
         uses: symbuzzer/fork-github-release@master
         with:
@@ -27,11 +49,12 @@ jobs:
           tag: ${{steps.version.outputs.prop}}
           name: ${{steps.version.outputs.prop}}
           body: Please check [changelog](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/CHANGELOG.md) for changes
-          files: ${{ github.event.repository.name }}.zip
+          files: release/*
           gzip: false
           draft: false
           prerelease: false
           allow_override: true
-      - name: Cleanup module zip
+          
+      - name: Cleanup release directory
         run:  |
-          rm ${{ github.event.repository.name }}.zip
+          rm -rf release
