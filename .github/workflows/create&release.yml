@@ -35,7 +35,7 @@ jobs:
         with:
           file: update.json
           field: zipUrl
-          value: https://github.com/symbuzzer/oled2lcd/releases/latest/download/oled2lcd_1.5.zip
+          value: https://github.com/symbuzzer/oled2lcd/releases/latest/download/oled2lcd_1.5x.zip
           
       - name: Create update15.json
         run:  |      
@@ -43,7 +43,7 @@ jobs:
           
       - name: Create module 1.5 zip
         run:  |  
-          sudo zip -r release/${{ github.event.repository.name }}_1.5.zip *  
+          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -exec zip -r release/${{ github.event.repository.name }}_1.5x.zip {} +  
              
       - name: Create module 2.0 files
         run:  |
@@ -56,11 +56,11 @@ jobs:
         with:
           file: update.json
           field: zipUrl
-          value: https://github.com/symbuzzer/oled2lcd/releases/latest/download/oled2lcd_2.0.zip
+          value: https://github.com/symbuzzer/oled2lcd/releases/latest/download/oled2lcd_2.0x.zip
           
       - name: Create module 2.0 zip
         run:  |  
-          sudo zip -r release/${{ github.event.repository.name }}_2.0.zip *  
+          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -exec zip -r release/${{ github.event.repository.name }}_2.0x.zip {} +  
           
       - name: Create and upload release asset
         uses: symbuzzer/fork-github-release@master
