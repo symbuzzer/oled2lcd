@@ -1,8 +1,12 @@
 For support this project: [Patreon](https://avalibeyaz.com/patreon)  
 --------------
 
+## v1.3.1  
+- Added 1 more different variants (2.0 and 1.5) to releases
+- Fixed some typos
+
 ## v1.3.0
-- Added 1 different variants (2.0 and 1.5) to releases
+- Added 1 more different variants (2.0 and 1.5) to releases
   
 ## v1.2.2
 - Added KernelSU support    
