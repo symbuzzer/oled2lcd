@@ -6,7 +6,7 @@ For support this project: [Patreon](https://avalibeyaz.com/patreon)
 - Fixed some typos
 - Fixed module over module issue  
 
-## v1.3.0
+## v1.3.0 (removed)
 - Added 1 more different variants (2.0 and 1.5) to releases
   
 ## v1.2.2
