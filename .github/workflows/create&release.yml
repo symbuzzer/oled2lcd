@@ -43,7 +43,8 @@ jobs:
           
       - name: Create module 1.5 zip
         run:  |  
-          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -exec zip -r release/${{ github.event.repository.name }}_1.5x.zip {} +  
+          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -name '.git' -prune -o -exec zip -r release/${{ github.event.repository.name }}_1.5x.zip {} +
+
              
       - name: Create module 2.0 files
         run:  |
@@ -60,7 +61,7 @@ jobs:
           
       - name: Create module 2.0 zip
         run:  |  
-          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -exec zip -r release/${{ github.event.repository.name }}_2.0x.zip {} +  
+          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -name '.git' -prune -o -exec zip -r release/${{ github.event.repository.name }}_2.0x.zip {} + 
           
       - name: Create and upload release asset
         uses: symbuzzer/fork-github-release@master
