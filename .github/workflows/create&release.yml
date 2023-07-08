@@ -43,8 +43,8 @@ jobs:
           
       - name: Create module 1.5 zip
         run:  |  
-          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -name '.git' -prune -o -name '.github' -prune -o -exec zip -r release/${{ github.event.repository.name }}_1.5x.zip {} +
-             
+          sudo zip -r release/${{ github.event.repository.name }}_1.5x.zip * --exclude release/\* --exclude \*.zip
+   
       - name: Create module 2.0 files
         run:  |
           sed -i '13s/.*/service call SurfaceFlinger 1022 f 2.0/' service.sh
@@ -60,8 +60,8 @@ jobs:
           
       - name: Create module 2.0 zip
         run:  |  
-          sudo find . -name 'release' -prune -o -name '*.zip' -prune -o -name '.git' -prune -o -name '.github' -prune -o -exec zip -r release/${{ github.event.repository.name }}_2.0x.zip {} +
-          
+          sudo zip -r release/${{ github.event.repository.name }}_2.0x.zip * --exclude release/\* --exclude \*.zip
+ 
       - name: Create and upload release asset
         uses: symbuzzer/fork-github-release@master
         with:
