@@ -26,9 +26,9 @@ jobs:
             
       - name: Create module 1.5 files
         run:  |
-          sed -i "13s/.*/# service call SurfaceFlinger 1022 f 1.5" service.sh
-          sed -i "6s/.*/# description=Increase the saturation of the panel to 1,5x" module.prop
-          sed -i "7s/.*/# updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/update15.json" module.prop     
+          sed -i '13s/.*/# service call SurfaceFlinger 1022 f 1.5/' service.sh
+          sed -i '6s/.*/# description=Increase the saturation of the panel to 1.5x./' module.prop
+          sed -i '7s~.*~# updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/update15.json~' module.prop
           sudo cp update.json update15.json
           
       - name: Mpdify update15.json zipUrl
@@ -44,9 +44,9 @@ jobs:
              
       - name: Create module 2.0 files
         run:  |
-          sed -i "13s/.*/# service call SurfaceFlinger 1022 f 2.0" service.sh
-          sed -i "6s/.*/# description=Increase the saturation of the panel to 2x" module.prop
-          sed -i "7s/.*/# updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/update.json" module.prop    
+          sed -i '13s/.*/# service call SurfaceFlinger 1022 f 2.0/' service.sh
+          sed -i '6s/.*/# description=Increase the saturation of the panel to 2.0x./' module.prop
+          sed -i '7s~.*~# updateJson=https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/update.json~' module.prop 
           
       - name: Mpdify update.json zipUrl
         uses: symbuzzer/fork-action-set-json-field@master
