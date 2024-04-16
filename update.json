@@ -1,6 +1,6 @@
 {
-  "version": "v1.3.1",
-  "versionCode": "131",
+  "version": "v1.3.2",
+  "versionCode": "010302",
   "zipUrl": "https://github.com/symbuzzer/oled2lcd/releases/latest/download/oled2lcd_2.0x.zip",
   "changelog": "https://raw.githubusercontent.com/symbuzzer/oled2lcd/main/CHANGELOG.md"
 }
