@@ -1,6 +1,9 @@
 For support this project: [Patreon](https://avalibeyaz.com/patreon)  
 --------------
 
+## v1.3.2
+- Try to use KernelSU's new feature "webroot html UI" (thanks to [0x0021](https://github.com/0x0021))
+  
 ## v1.3.1  
 - Added 1 more different variant (2.0 and 1.5) to releases
 - Fixed some typos
